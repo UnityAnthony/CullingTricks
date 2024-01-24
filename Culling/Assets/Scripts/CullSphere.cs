@@ -5,9 +5,7 @@ using UnityEngine;
 public class CullSphere : MonoBehaviour
 {
     public CullingGroup group;
-    public Camera cam;
     public float radius = 1;
-    public float[] distances = new float[2] { 25.0f, 50.0f };
    // public Vector3 height = Vector3.zero;
 
     float lastRadus;
@@ -18,7 +16,6 @@ public class CullSphere : MonoBehaviour
     public CullingManager cullMan = null;
     private void Awake()
     {
-        cam = Camera.main;
         cullMan = FindObjectOfType<CullingManager>();
     }
     // Start is called before the first frame update
