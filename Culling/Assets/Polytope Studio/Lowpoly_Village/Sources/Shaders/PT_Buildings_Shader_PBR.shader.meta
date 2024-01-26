@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 255b400e6b8ac644588946664da1ff3f
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _TextureSample2: {fileID: 2800000, guid: 34892be16c52f1948b4b5666052d6bf5, type: 3}
+  - _TextureSample9: {fileID: 2800000, guid: c91055552562c3941a1c318e8d5bc5c5, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 187052
+  packageName: Lowpoly Environment - Nature Free - MEDIEVAL FANTASY SERIES
+  packageVersion: 1.1
+  assetPath: Assets/Polytope Studio/Lowpoly_Village/Sources/Shaders/PT_Buildings_Shader_PBR.shader
+  uploadId: 633845
