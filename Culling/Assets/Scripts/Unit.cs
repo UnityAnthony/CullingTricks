@@ -18,14 +18,10 @@ public class Unit : MonoBehaviour
             cullMan.AddSphere(culler);
             cullIndex = culler.GetIndex();
             cullMan.group.onStateChanged += OnLeaveCameraCuller;
+            ShowRenderers(cullMan.group.IsVisible(cullIndex));   
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnDestroy()
     {
         if (culler && cullMan)
@@ -50,17 +46,22 @@ public class Unit : MonoBehaviour
         if (evt.hasBecomeVisible)
         {
             //Debug.LogFormat(name + " has become visible!", evt.index);
-            for (int i = 0; i < rends.Length; i++)
-                rends[i].enabled = true;
+            ShowRenderers(true);
             //enable other things like animators
         }
         if (evt.hasBecomeInvisible)
         {
             // Debug.LogFormat(name + "has become invisible!", evt.index);
-            for (int i = 0; i < rends.Length; i++)
-                rends[i].enabled = false;
-            
+            ShowRenderers(false);
+
             //disable other things like animators
+        }
+    }
+    public void ShowRenderers(bool b)
+    {
+        for (int i = 0; i < rends.Length; i++)
+        {
+            rends[i].enabled = b;
         }
     }
 }
