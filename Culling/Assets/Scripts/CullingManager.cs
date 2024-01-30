@@ -2,27 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// In charge of holding the CullingGroup which holds each CullingSphere
+/// </summary>
 public class CullingManager : MonoBehaviour
 {
-
+    #region Public Vars
     public CullingGroup group;
     public BoundingSphere[] spheres;
     public int MAX_CULLSPHERES = 500;
     public Dictionary<int, CullSphere> cSpheres = new Dictionary<int, CullSphere>();
-    public List<int> availableSphereIndex = new List<int>();
     public int currentMaxSpheres = 0;
     public float[] distances = new float[2] { 25.0f, 50.0f };
-    // Start is called before the first frame update
+    #endregion
+    /// <summary>
+    /// Call SetupCullSpheres
+    /// </summary>
     void Awake()
     {
         SetupCullSpheres();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    /// <summary>
+    /// Clear all the group and sphere data
+    /// </summary>
     private void OnDestroy()
     {
         group.Dispose();
@@ -30,6 +32,10 @@ public class CullingManager : MonoBehaviour
         spheres = null;
     }
     #region CullSphere
+    /// <summary>
+    /// Make a single CullingGroup that has MAX_CULLSPHERES spheres. It is better to have unused spheres than to continuously grow the spheres array.
+    /// Get all the CullSpheres in the scene, these are the objects saved in the scene. For each CullSphere add to the CullingGroup
+    /// </summary>
     private void SetupCullSpheres()
     {
 
@@ -60,6 +66,10 @@ public class CullingManager : MonoBehaviour
         group.SetDistanceReferencePoint(Camera.main.transform);
 
     }
+    /// <summary>
+    /// Remove this sphere from group and index from the dictionary
+    /// </summary>
+    /// <param name="cS"></param>
     public void RemoveSphere(CullSphere cS)
     {
         int i = cS.GetIndex();
@@ -76,6 +86,10 @@ public class CullingManager : MonoBehaviour
             Debug.Log("RemoveSphere does not contain key for " + i);
         }
     }
+    /// <summary>
+    /// Remove Sphere from group and disctionary
+    /// </summary>
+    /// <param name="i"></param>
     public void RemoveSphere(int i)
     {
         if (cSpheres.ContainsKey(i))
@@ -92,6 +106,10 @@ public class CullingManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Add a dynamic sphere to the group and dictionary, if it is not already there.
+    /// </summary>
+    /// <param name="cS"></param>
     public void AddSphere(CullSphere cS)
     {
         if (cSpheres.ContainsKey(cS.GetIndex()))

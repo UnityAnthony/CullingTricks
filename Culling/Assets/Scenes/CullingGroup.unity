@@ -417,8 +417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfc4431fcdeeb734e9e7d3f39199df1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_CULLSPHERES: 500
-  availableSphereIndex: 
+  MAX_CULLSPHERES: 700
   currentMaxSpheres: 0
   distances:
   - 25
@@ -455,7 +454,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!156049354 &591802727
 Grid:
   m_ObjectHideFlags: 0
@@ -486,7 +485,6 @@ MonoBehaviour:
   maxObjects: 1000
   grid: {fileID: 591802727}
   width: 10
-  objs: []
   cullMan: {fileID: 0}
 --- !u!4 &591802729
 Transform:
