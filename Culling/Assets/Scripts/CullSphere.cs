@@ -1,11 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class CullSphere : MonoBehaviour
 {
     #region Public Variables
-    public CullingGroup group;
     public float radius = 1;
     public bool DEBUG = false;
     public int cullingIndex = -1;
@@ -23,7 +21,6 @@ public class CullSphere : MonoBehaviour
     {
         cullMan = FindObjectOfType<CullingManager>();
     }
-
     /// <summary>
     /// Clear the current sphere
     /// </summary>
@@ -34,8 +31,6 @@ public class CullSphere : MonoBehaviour
             cullMan.RemoveSphere(cullingIndex);
         }
     }
-
-
     /// <summary>
     /// Render Gizmo for the Sphere for debugging
     /// </summary>

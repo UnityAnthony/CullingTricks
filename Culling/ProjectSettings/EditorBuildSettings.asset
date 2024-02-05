@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Enviroment_GPUCulling.unity
     guid: 316478d87b3c81840b860d2017e18b0a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Enviroment_CullingGroup.unity
     guid: b73d89b8951e6fd43849be97d6862cfd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Enviroment_Umbra.unity
     guid: 167732e7fa27d0e4cae0019f423db234
   m_configObjects: {}

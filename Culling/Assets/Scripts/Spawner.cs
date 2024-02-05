@@ -30,6 +30,7 @@ public class Spawner : MonoBehaviour
         { 
             if(maxObjects > cullMan.MAX_CULLSPHERES)
             {
+                Debug.LogWarning("Requesting more objects than there are CullSpheres");
                 maxObjects = cullMan.MAX_CULLSPHERES - cullMan.currentMaxSpheres;// reduce the amount by any sphere already in the scene
             }
         }
