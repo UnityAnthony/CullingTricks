@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 07952a9aac91270429607bf797d78089
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174461
+  packageName: Tiling Textures - 3D Microgame Add-Ons
+  packageVersion: 2.0.0
+  assetPath: Assets/AddOns/Mg3D_TilingTextures/Materials/Dirt_Desert_MAT.mat
+  uploadId: 483154

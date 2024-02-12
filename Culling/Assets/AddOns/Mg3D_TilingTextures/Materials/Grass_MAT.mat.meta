@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fadf6dc2a09fe784faf50215c2461a8c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174461
+  packageName: Tiling Textures - 3D Microgame Add-Ons
+  packageVersion: 2.0.0
+  assetPath: Assets/AddOns/Mg3D_TilingTextures/Materials/Grass_MAT.mat
+  uploadId: 483154

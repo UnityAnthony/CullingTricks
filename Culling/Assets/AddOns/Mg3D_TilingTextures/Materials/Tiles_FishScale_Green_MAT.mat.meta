@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ca50bfa57b3bd5d4c972b96a3dda74d2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174461
+  packageName: Tiling Textures - 3D Microgame Add-Ons
+  packageVersion: 2.0.0
+  assetPath: Assets/AddOns/Mg3D_TilingTextures/Materials/Tiles_FishScale_Green_MAT.mat
+  uploadId: 483154

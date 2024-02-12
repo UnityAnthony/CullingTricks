@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4dae68f564001bf4f8a540fbbf107450
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174461
+  packageName: Tiling Textures - 3D Microgame Add-Ons
+  packageVersion: 2.0.0
+  assetPath: Assets/AddOns/Mg3D_TilingTextures/Materials/Concrete_Old_MAT.mat
+  uploadId: 483154

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5d9262c15bef2a244b0c1235b4c3e338
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174461
+  packageName: Tiling Textures - 3D Microgame Add-Ons
+  packageVersion: 2.0.0
+  assetPath: Assets/AddOns/Mg3D_TilingTextures/Materials/WoodPlanks_MAT.mat
+  uploadId: 483154

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0fa646129619f1b47a47dbda4d777fb1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174461
+  packageName: Tiling Textures - 3D Microgame Add-Ons
+  packageVersion: 2.0.0
+  assetPath: Assets/AddOns/Mg3D_TilingTextures/Materials/Tiles_FishScale_Blue_MAT.mat
+  uploadId: 483154
