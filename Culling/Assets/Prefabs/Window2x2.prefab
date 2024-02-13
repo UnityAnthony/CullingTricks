@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 966396022949766517}
   - component: {fileID: 3570804285746310928}
   - component: {fileID: 8203293661713029533}
+  - component: {fileID: 3113284440969505847}
   m_Layer: 0
   m_Name: Window2x2
   m_TagString: Untagged
@@ -1254,3 +1255,13 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7541363312647452117}
   m_Mesh: {fileID: 0}
+--- !u!41 &3113284440969505847
+OcclusionPortal:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7541363312647452117}
+  m_Open: 0
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}

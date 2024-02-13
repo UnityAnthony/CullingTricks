@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3572371940796480813}
   - component: {fileID: 4967936926073489477}
   - component: {fileID: 935684907094190736}
+  - component: {fileID: 7562797996364257903}
   m_Layer: 0
   m_Name: Doorway2x2
   m_TagString: Untagged
@@ -978,3 +979,13 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1681114880517133222}
   m_Mesh: {fileID: 0}
+--- !u!41 &7562797996364257903
+OcclusionPortal:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681114880517133222}
+  m_Open: 0
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
