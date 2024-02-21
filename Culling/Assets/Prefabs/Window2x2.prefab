@@ -1,5 +1,54 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6818765176494164975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 936630003755043988}
+  - component: {fileID: 8488143316963458682}
+  m_Layer: 0
+  m_Name: Culler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &936630003755043988
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6818765176494164975}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8446811095355886215}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8488143316963458682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6818765176494164975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347e6d03820515142a94f090e607ff0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 1.3
+  DEBUG: 0
+  cullingIndex: -1
+  canUpdate: 0
+  cullMan: {fileID: 0}
 --- !u!1 &7541363312647452117
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,6 +62,7 @@ GameObject:
   - component: {fileID: 3570804285746310928}
   - component: {fileID: 8203293661713029533}
   - component: {fileID: 3113284440969505847}
+  - component: {fileID: 2268838559538520926}
   m_Layer: 0
   m_Name: Window2x2
   m_TagString: Untagged
@@ -32,7 +82,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 936630003755043988}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &966396022949766517
@@ -1265,3 +1316,20 @@ OcclusionPortal:
   m_Open: 0
   m_Center: {x: 0, y: 0.25, z: 0}
   m_Size: {x: 1.2, y: 1, z: 1}
+--- !u!114 &2268838559538520926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7541363312647452117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d623f5040104424692fb2a17baaf007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cullIndex: -1
+  culler: {fileID: 8488143316963458682}
+  rends:
+  - {fileID: 966396022949766517}
+  cullMan: {fileID: 0}
