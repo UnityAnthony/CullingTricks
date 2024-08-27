@@ -1313,7 +1313,7 @@ OcclusionPortal:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7541363312647452117}
-  m_Open: 0
+  m_Open: 1
   m_Center: {x: 0, y: 0.25, z: 0}
   m_Size: {x: 1.2, y: 1, z: 1}
 --- !u!114 &2268838559538520926
