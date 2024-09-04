@@ -60,7 +60,6 @@ GameObject:
   - component: {fileID: 5705539758440290059}
   - component: {fileID: 8683500536680192174}
   - component: {fileID: 6873912444871011428}
-  - component: {fileID: 4004081114323724748}
   m_Layer: 0
   m_Name: PT_Pine_Tree_03_green_cut
   m_TagString: Untagged
@@ -82,7 +81,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8683964084814383565}
-  - {fileID: 8305660061621022613}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8683500536680192174
@@ -139,72 +137,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4004081114323724748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4928616408704863665}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d623f5040104424692fb2a17baaf007, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cullIndex: -1
-  culler: {fileID: 6554728258461311004}
-  rends:
-  - {fileID: 6873912444871011428}
-  cullMan: {fileID: 0}
---- !u!1 &6323753255477128560
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8305660061621022613}
-  - component: {fileID: 6554728258461311004}
-  m_Layer: 0
-  m_Name: Culler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8305660061621022613
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6323753255477128560}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.15, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5705539758440290059}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6554728258461311004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6323753255477128560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 347e6d03820515142a94f090e607ff0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 4.5
-  DEBUG: 0
-  cullingIndex: -1
-  canUpdate: 0
-  cullMan: {fileID: 0}
 --- !u!1 &7272673429273803700
 GameObject:
   m_ObjectHideFlags: 0
