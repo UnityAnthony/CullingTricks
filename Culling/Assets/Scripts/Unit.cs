@@ -48,12 +48,12 @@ public class Unit : MonoBehaviour
     /// <param name="evt"></param>
     public void OnCullerStateChanged(CullingGroupEvent evt)
     {
-        //  Debug.Log("OnLeaveCameraCuller"  + evt.index);
+        //  Debug.Log("OnCullerStateChanged"  + evt.index);
         if (cullIndex != evt.index)
         {
             return;
         }
-       // Debug.Log("OnLeaveCameraCuller distance " + evt.currentDistance);// evt.currentDistance will be 0 if Distances are not set.
+        Debug.Log("OnCullerStateChanged distance " + evt.currentDistance);// evt.currentDistance will be 0 if Distances are not set.
 
         if (evt.hasBecomeVisible)
         {
