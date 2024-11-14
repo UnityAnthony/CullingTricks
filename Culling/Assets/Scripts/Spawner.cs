@@ -10,9 +10,9 @@ public class Spawner : MonoBehaviour
 {
     #region Public Vars
     public GameObject[] prefabs = new GameObject[0];
-    public int maxObjects;
+    public int maxObjects = 100;
     public Grid grid;
-    public int width = 100;
+    public int width = 10;
     public CullingManager cullMan;
     #endregion
 
