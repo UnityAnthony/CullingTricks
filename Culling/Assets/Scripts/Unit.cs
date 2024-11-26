@@ -16,7 +16,7 @@ public class Unit : MonoBehaviour
     /// If you have a CullSphere and there is a CullManager, this will add the Unit's Sphere to the CullManager. This also subscribes to the CullingGroup's OnCullerStateChanged Callback.
     /// This is called in Start because CullManager:Awake sets up the CullingGroup which needs to exist before we add to the CullingGroup. 
     /// </summary>
-    void Start()
+    protected void Start()
     {
         if (!cullMan)
         {
@@ -34,7 +34,7 @@ public class Unit : MonoBehaviour
     /// <summary>
     /// Un subscribe if the object is destroyed
     /// </summary>
-    private void OnDestroy()
+    protected void OnDestroy()
     {
         if (culler && cullMan)
         {
@@ -46,7 +46,7 @@ public class Unit : MonoBehaviour
     /// This is called when an object is visible OR not visible OR is located in a different distance band 
     /// </summary>
     /// <param name="evt"></param>
-    public void OnCullerStateChanged(CullingGroupEvent evt)
+    public virtual  void OnCullerStateChanged(CullingGroupEvent evt)
     {
         //  Debug.Log("OnCullerStateChanged"  + evt.index);
         if (cullIndex != evt.index)
