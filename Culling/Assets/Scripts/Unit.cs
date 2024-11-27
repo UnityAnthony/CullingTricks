@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public class Unit : MonoBehaviour
 {
-    public int cullIndex = -1;
+   // public int cullIndex = -1;
     public CullSphere culler = null;
     public Renderer[] rends = new Renderer[0];
     public CullingManager cullMan = null;
@@ -25,7 +25,7 @@ public class Unit : MonoBehaviour
         if (culler && cullMan)
         {
             cullMan.AddSphere(culler);
-            cullIndex = culler.GetIndex();
+            int cullIndex = culler.GetIndex();
             cullMan.group.onStateChanged += OnCullerStateChanged;
             ShowRenderers(cullMan.group.IsVisible(cullIndex));   
         }
@@ -49,7 +49,7 @@ public class Unit : MonoBehaviour
     public virtual  void OnCullerStateChanged(CullingGroupEvent evt)
     {
         //  Debug.Log("OnCullerStateChanged"  + evt.index);
-        if (cullIndex != evt.index)
+        if (culler.GetIndex() != evt.index)
         {
             return;
         }

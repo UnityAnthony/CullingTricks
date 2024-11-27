@@ -73,37 +73,62 @@ public class CullingManager : MonoBehaviour
     public void RemoveSphere(CullSphere cS)
     {
         int i = cS.GetIndex();
-        if (cSpheres.ContainsKey(i))
-        {
-            // CullSphere cS = cSpheres[i];
-            cS.CanUpdate(false);
-            cSpheres.Remove(i);
-            currentMaxSpheres--;
-            group.SetBoundingSphereCount(currentMaxSpheres);
-        }
-        else
-        {
-            Debug.Log("RemoveSphere does not contain key for " + i);
-        }
+        RemoveSphere(i);
     }
+    void RemoveAndCompact(int i)
+    { 
+        if (!cSpheres.ContainsKey(i))
+        {
+            Debug.Log("Culler not in dictionary");
+            return;
+        }
+
+        int lastIndex = currentMaxSpheres - 1;
+        // Remove from hashmap
+        CullSphere cS = cSpheres[i];
+        CullSphere lastCS = cSpheres[lastIndex];
+        cS.CanUpdate(false);
+        cSpheres.Remove(i);
+        
+        if (i < lastIndex)
+        {
+            // Get the last object
+            BoundingSphere lastObject = spheres[lastIndex];
+
+            // Move it to the removed position
+            spheres[i] = lastObject;
+
+            // Update its index in the map
+            cSpheres.Remove(lastIndex);
+            lastCS.SetIndex(i);
+            cSpheres.Add(i, lastCS);
+        }
+
+        currentMaxSpheres--;
+        group.SetBoundingSpheres(spheres);
+        group.SetBoundingSphereCount(currentMaxSpheres);
+    }
+
+
     /// <summary>
     /// Remove Sphere from group and disctionary
     /// </summary>
     /// <param name="i"></param>
     public void RemoveSphere(int i)
     {
-        if (cSpheres.ContainsKey(i))
-        {
-            CullSphere cS = cSpheres[i];
-            cS.CanUpdate(false);
-            cSpheres.Remove(i);
-            currentMaxSpheres--;
-            group.SetBoundingSphereCount(currentMaxSpheres);
-        }
-        else
-        {
-            Debug.Log("RemoveSphere does not contain key for " + i);
-        }
+        RemoveAndCompact(i);
+        //if (cSpheres.ContainsKey(i))
+        //{
+        //    CullSphere cS = cSpheres[i];
+        //    cS.CanUpdate(false);
+        //    cSpheres.Remove(i);
+        //    currentMaxSpheres--;
+        //    group.SetBoundingSphereCount(currentMaxSpheres);
+        //}
+        //else
+        //{
+        //    Debug.Log("RemoveSphere does not contain key for " + i);
+        //}
     }
 
     /// <summary>

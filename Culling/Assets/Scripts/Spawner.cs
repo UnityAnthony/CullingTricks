@@ -35,20 +35,24 @@ public class Spawner : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < maxObjects; i++) 
+
+    }
+    private void OnEnable()
+    {
+
+        for (int i = 0; i < maxObjects; i++)
         {
             int index = Random.Range(0, prefabs.Length);
             GameObject gameObject = prefabs[index];
             int x = i % width;
             int z = i / width;
 
-            Vector3 position = grid.GetCellCenterWorld( new Vector3Int(x, 0, z) );
+            Vector3 position = grid.GetCellCenterWorld(new Vector3Int(x, 0, z));
             AsyncInstantiateOperation<GameObject> result = InstantiateAsync(gameObject, position, Quaternion.identity);
             result.completed += UpdateCuller;
 
         }
     }
-
 
 
     /// <summary>

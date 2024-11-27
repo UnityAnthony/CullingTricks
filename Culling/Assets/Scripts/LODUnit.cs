@@ -23,7 +23,7 @@ public class LODUnit : Unit
         if (culler && cullMan)
         {
             cullMan.AddSphere(culler);
-            cullIndex = culler.GetIndex();
+            int cullIndex = culler.GetIndex();
             cullMan.group.onStateChanged += OnCullerStateChanged;
 
             currentLOD = cullMan.group.GetDistance(cullIndex);
@@ -33,7 +33,7 @@ public class LODUnit : Unit
     public override void OnCullerStateChanged(CullingGroupEvent evt)
     {
         //  Debug.Log("LODUnit OnCullerStateChanged " + evt.index);
-        if (cullIndex != evt.index)
+        if (culler.GetIndex() != evt.index)
         {
             return;
         }
