@@ -116,19 +116,7 @@ public class CullingManager : MonoBehaviour
     /// <param name="i"></param>
     public void RemoveSphere(int i)
     {
-        RemoveAndCompact(i);
-        //if (cSpheres.ContainsKey(i))
-        //{
-        //    CullSphere cS = cSpheres[i];
-        //    cS.CanUpdate(false);
-        //    cSpheres.Remove(i);
-        //    currentMaxSpheres--;
-        //    group.SetBoundingSphereCount(currentMaxSpheres);
-        //}
-        //else
-        //{
-        //    Debug.Log("RemoveSphere does not contain key for " + i);
-        //}
+         RemoveAndCompact(i);
     }
 
     /// <summary>
