@@ -105,6 +105,7 @@ public class CullingManager : MonoBehaviour
         }
 
         currentMaxSpheres--;
+
         group.SetBoundingSpheres(spheres);
         group.SetBoundingSphereCount(currentMaxSpheres);
     }
@@ -117,6 +118,18 @@ public class CullingManager : MonoBehaviour
     public void RemoveSphere(int i)
     {
          RemoveAndCompact(i);
+        //if (cSpheres.ContainsKey(i))
+        //{
+        //    CullSphere cS = cSpheres[i];
+        //    cS.CanUpdate(false);
+        //    cSpheres.Remove(i);
+        //    currentMaxSpheres--;
+        //    group.SetBoundingSphereCount(currentMaxSpheres);
+        //}
+        //else
+        //{
+        //    Debug.Log("RemoveSphere does not contain key for " + i);
+        //}
     }
 
     /// <summary>
@@ -140,6 +153,7 @@ public class CullingManager : MonoBehaviour
                 spheres[i] = cS.GetSphere();
                 cS.CanUpdate(true);
                 currentMaxSpheres++;
+                group.SetBoundingSpheres(spheres);
                 group.SetBoundingSphereCount(currentMaxSpheres);
                 return;
             }
